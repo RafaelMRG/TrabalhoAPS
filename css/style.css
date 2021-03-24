@@ -1,25 +1,30 @@
+/* todos os elementos da página */
 *{
     margin: 0;
     padding: 0;
 }
 
+/* config para os elementos com ID topo */
 #topo{
     box-shadow: 2px 2px 2px 1px rgb(187, 187, 187);
 }
 
+/* config para os elementos com ID title */
 #title{
-    color: rgb(39, 128, 180);
+    color: #00b173;
     font-family: sans-serif;
     margin-left: 25%;
 }
 
+/* config para os elementos com subtitulo */
 #subtitulo{
-    color: rgb(39, 128, 180);
+    color: #00b173;
     font-family: sans-serif;
     font-size: 1.5em;
     margin-left: 38%;
 }
 
+/* configurando todos os elementos que tiverem dentro da tag <body> */
 body{
     background-color: rgb(77, 77, 77);
     font-family: sans-serif;
@@ -29,7 +34,8 @@ body{
     margin-right: 15%; 
 }
 
-.borda{
+/* config para os elementos da classe conteudo */
+.conteudo{
     border-style: solid;
     border-width: 0.2px;
     border-color: rgb(77, 77, 77);
@@ -37,41 +43,59 @@ body{
  
 }
 
+/* tudo que estiver dentro da tag <p> terá essa config */
 p{
     padding: 1em;
     font-family: Arial, Helvetica, sans-serif;
-    color: black;
+    color: rgb(221, 221, 221);
     font-size: 20px;
 }
 
+/* config para os elementos com ID globo */
 #globo{
     border: 1px solid rgb(187, 187, 187);
     border-radius: 4px;
     padding: 3px;
-    width: 170px;
-    position: absolute;
-    right: 10px ;
-    top: 158px;
+    width: 260px;
+    margin-left: 35%;
 }
 
+/* config para a imagem de lâmpada ( img id="lampada"... ) */
 #lampada{
     border: 1px solid rgb(187, 187, 187);
     border-radius: 4px;
     padding: 3px;
-    width: 170px;
-    position: absolute;
-    right: 10px;
-    bottom: 150px;
+    width: 240px;
+    margin-left: 35%;
 }
 
+/* config para os elementos da classe atalho */
 .atalho{
     position: absolute;
     left: 50px;
     top: 158px;
 }
 
-.atalho li{
-    color: rgb(39, 128, 180);
+/* configurando a tag <li> que esta dentro da classe atalho */
+.atalho, li{
+    color: #00b173;
     font-size: 20px;
     font-weight: bold;
+}
+ /* configurando a tag <h2> que está dentro do ID borda */
+#borda, h2{
+    color: #00b173;
+    text-decoration: underline;
+    margin-left: 40%;
+}
+
+/* config para os elementos com ID footer (roda-pé) */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #00b173;
+    color: white;
+    text-align: center;
 }
