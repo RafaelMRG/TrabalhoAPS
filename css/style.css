@@ -4,11 +4,14 @@
 	--CorShadowNavBar: rgba(0, 0, 0, 0.5);
 	--CorShadowContainer: rgba(0, 0, 0, 0.2);
 	--CorDeepskyblue50: rgba(0, 191, 255, 0.5);
+	--CorTextoSemiPreto: rgb(55, 55, 55);
 }
+
 
 /* 🔽 formatando o body 🔽 */
 html,
 body {
+	font-family: 'Baloo Tammudu 2', cursive; /* Fonte importada no head do html */
 	margin: 0;
 	padding: 0;
 	height: 100%;
@@ -21,25 +24,146 @@ html {
 	justify-items: flex-start;
 }
 
-/* 🔽 Formatando o tamanho das divs(todos elementos do site) para ficar igual o tamanho da borda 🔽 */
-* {
+/* 🔽 Formatando o tamanho de todos elementos do site para ficar igual o tamanho da borda 🔽 */
+*, *::before, *::after {
 	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
 }
+
+
 
 /* 🔽 Inicio de estilização geral 🔽 */
 
-/* 🔽 essa class contem o menu do topo */
+
+
+
+/* ///////////////////////////////////////// */
+/* ///🔽 INICIO ESTILIZAÇÃO DO NAVBAR 🔽/// */
+/* ///////////////////////////////////////// */
+
+
+
 .navbar {
-	z-index: 1; /* ◀ z-index define se vai renderizar por tras ou pela frente */
-	position: fixed; /* ◀ fixed define elemento fixo na viewport */
-	display: flex; /* ◀ tecnologia flex, bom para trabalhar alinhamento */
-	top: 0; /* ◀ posiciona o elemento a 0px do topo */
-	left: 0; /* ◀ posiciona o elemento a 0px da esquerda */
+	z-index: 2; /* z-index define se vai renderizar por tras ou pela frente */
+	position: fixed; /* fixed define elemento fixo na viewport */
+	top: 0; /* posiciona o elemento a 0px do topo */
+	left: 0; /* posiciona o elemento a 0px da esquerda */
 	background-color: white;
-	height: 75px;
-	width: 100%;
-	box-shadow: 0px 0px 5px var(--CorShadowNavBar);
+	width: 100%; /* navbar fica com largura da tela, podemos trocar por 100vw também */
+	box-shadow: 0px 0px 5px var(--CorShadowNavBar); /* sombra */
 }
+.navbar *, .navbar *::after, .navbar *::before{
+	/* aplica transição em todos elementos da navbar */
+	transition: all 300ms ease-in-out, max-height 250ms ease;
+}
+.navbar ul{
+	list-style: none;	/* Tira os pontos do inicio da lista */
+	position: relative;
+	float: right; /* flutua elementos ul para a direita */
+	margin-right: 12%;	/* espaçamento a direita da tela */
+}
+.navbar ul li{
+	position: relative;
+	float: left; /* flutua elementos li dentro de elementos ul para a esquerda */
+	border-left: 1px solid rgba(0, 0, 0, 0.2); /* borda preta */
+}
+.navbar > ul > li:last-child{
+	/* aplica borda preta no lado direito do ultimo li dentro do primeiro li do primeiro ul */
+	border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.navbar ul li a{
+	padding: 20px 1vw; /* define a largura dos botões */
+	display: block;
+	color: var(--CorTextoSemiPreto); /* define a cor do texto */
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.navbar ul li:hover > a{
+	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+}
+.navbar > ul > li::before{
+	/*
+	usamos o pseudoelemento :before para criar um efeito de transição
+	com o linear-gradient, que por padrão não é uma opção transicionavel
+	por esse motivo usamos então a transição na opacidade do elemento inteiro
+	, foi decidido usar o :before porque é um elemento que pega a geometria do
+	elemento real mas não tem conteúdo (invisivel sem ter o linear-gradient aplicado)
+	*/
+	z-index: -1; /* posiciona o pseudoelemento atrás do texto */
+	content: ""; /* define esse pseudoelemento como sem conteudo para deixar invisivel */
+	display: block;
+	position: absolute; /* necessário usar absolute para pegar a geometria do elemento real */
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	/* todas 4 opções de posicionamento acima diz para o renderizador onde deve ser
+	a borda do pseudoelemento, então a borda do pseudoelemento vai ser 0px a esquerda, topo,
+	fundo e direita do elemento real */
+	background: linear-gradient(0deg, rgb(96, 146, 22) 0%, rgba(173,255,47,1) 100%);
+	opacity: 0%;
+}
+.navbar > ul > li:hover:before{
+	/* muda as propriedades do pseudoelemento :before quando passar o mouse em cima */
+	opacity: 75%;
+	pointer-events: none;
+}
+.navbar ul ul{
+	/* opções do submenu */
+	visibility: hidden; /* deixa o submenu invisivel como estado inicial */
+	display: block;
+	position: absolute;
+	top: 100%;
+	transform: translateX(-1px);
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	width: max-content;
+	/*
+	🔼
+	a largura vai ser o tamanho do maior elemento filho do submenu
+	muda de tamanho ao mudar o texto do link (responsivo)
+	*/
+	background: white;
+	max-height: 0%; /* submenu vai ter 0% de altura, estado inicial, vai pra 300% no hover */
+	overflow: hidden;
+}
+.navbar ul li:hover > ul{
+	/* max-height deve ser o (nº de submenus * 100%)
+	define a visibilidade e tamanho do submenu
+	*/
+	max-height: 300%;/* (3 submenus * 100%) = 300%, a transição vai de 0% a 300%*/
+	visibility: visible;
+}
+.navbar ul ul li{
+	/* estilização dos elementos do submenu */
+	position: relative;
+	float: none;
+	/* tirar o float deixa os elementos ficarem um acima do outro em vez de flutuar todos para um lado na mesma linha */
+	border: none; /* reseta a borda */
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* agora setamos a borda bottom */
+}
+.navbar ul ul li:hover{
+	/* quando passar o mouse nos elementos do submenu, vão pegar a cor verde */
+	background: greenyellow;
+}
+.navbar ul p{
+	/* ajustes do alinhamento de texto
+	fonte que importamos do google tem um padding embutido
+	cheguei a esse valor testando e usando o inspecionar elemento
+	até aparentar estar centralizado verticalmente
+	*/
+	line-height: 100%;
+	padding-top: 0.8ch;
+}
+
+
+
+/* ///////////////////////////////////////// */
+/* ////🔼 FIM ESTILIZAÇÃO DO NAVBAR 🔼///// */
+/* ///////////////////////////////////////// */
+
+
 
 /* 🔽 essa class contem o conteudo 🔽 */
 .container {
