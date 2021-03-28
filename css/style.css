@@ -5,6 +5,8 @@
 	--CorShadowContainer: rgba(0, 0, 0, 0.2);
 	--CorDeepskyblue50: rgba(0, 191, 255, 0.5);
 	--CorTextoSemiPreto: rgb(55, 55, 55);
+	--CorNavGradient1:rgb(96, 146, 22);
+	--CorNavGradient2:rgba(173,255,47,1);
 }
 
 
@@ -102,7 +104,7 @@ html {
 	/* todas 4 opções de posicionamento acima diz para o renderizador onde deve ser
 	a borda do pseudoelemento, então a borda do pseudoelemento vai ser 0px a esquerda, topo,
 	fundo e direita do elemento real */
-	background: linear-gradient(0deg, rgb(96, 146, 22) 0%, rgba(173,255,47,1) 100%);
+	background: linear-gradient(0deg, var(--CorNavGradient1) 0%, var(--CorNavGradient2) 100%);
 	opacity: 0%;
 }
 .navbar > ul > li:hover:before{
