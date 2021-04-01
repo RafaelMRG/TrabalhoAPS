@@ -7,6 +7,7 @@
 	--CorTextoSemiPreto: rgb(55, 55, 55);
 	--CorNavGradient1:rgb(96, 146, 22);
 	--CorNavGradient2:rgba(173,255,47,1);
+	--CorTextoCinza: rgb(55, 55, 55);
 }
 
 
@@ -171,17 +172,120 @@ h1{
 /* ////🔼 FIM ESTILIZAÇÃO DO NAVBAR 🔼///// */
 /* ///////////////////////////////////////// */
 
+/* ///////////////////////////////////////// */
+/* ///🔽 INICIO ESTILIZAÇÃO DO CONTAINER 🔽/// */
+/* ///////////////////////////////////////// */
+
 
 
 /* 🔽 essa class contem o conteudo 🔽 */
 .container {
 	margin-top: 150px;
-	padding: 3rem;
+	padding: 4rem;
 	min-height: calc(100vh - 450px); /* 550px = margin-top do container + height do footer */
 	background-color: white;
 	border-radius: 4px;
 	box-shadow: 0px 5px 18px var(--CorShadowContainer);
 }
+
+.container-titulo{
+	box-sizing: content-box;
+	overflow: hidden;
+	display: inline-block;
+	height: 2.5em;
+	padding: 0.3em 1em 0.3em 1em;
+	vertical-align: middle;
+	text-transform: uppercase;
+	border-radius: 9999px;
+	/* background-color: lawngreen; */
+	background-color: var(--CorBackgroundBody);
+	box-shadow: 0px 2px 0.8em rgba(80, 80, 80, 0.5);
+	transition: background-color 300ms ease;
+	cursor: pointer;
+	color: var(--CorTextoCinza);
+}
+
+.container-titulo:hover{
+	background-color: lawngreen;
+}
+
+.container-titulo img{
+	opacity: 85%;
+	display: inline;
+	height: 2.5em;
+	vertical-align: middle;
+	padding: 0px 0.5em 0px 0px;
+}
+
+.container-titulo h1{
+	display: inline-block;
+	line-height: 0.5em;
+	padding-top: 0.5em;/* fonte vem com um padding padrão, isso balanceia o padding dos 2 lados */
+	vertical-align: middle;
+	white-space: pre; /* não colapsa espaços brancos em 1 */
+}
+
+.container-quadro{
+	display: flex;
+	margin: 4em 0;
+}
+
+.quadro{
+	display: flex;
+	height: 160px;
+	width: 320px;
+	border-radius: 8px;
+	border: 1px solid darkgray;
+	color: var(--CorTextoCinza);
+	background-color: rgb(225, 202, 207);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	padding: 1rem 0rem 1rem 1rem;
+	justify-items: center;
+}
+
+.quadro-texto{
+	display: inline;
+	margin: auto 0;
+	text-transform: uppercase;
+	font-size: 1.1em;
+	line-height: 1em;
+}
+
+.quadro-linha1{
+	padding-top: 0.5em;
+	margin-bottom: 0.5rem;
+}
+.quadro-linha2{
+	font-size: 2.05em;
+	padding-top: 0.5em;
+}
+
+.quadro-seta{
+	margin: 0 auto;
+	display: flex;
+	height: 80px;
+	width: 80px;
+	align-self: center;
+	justify-content: center;
+	background-color: crimson;
+	border-radius: 9999px;
+	color: rgb(225, 202, 207);
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.seta{
+	font-size: 5em;
+	line-height: 1.55em;
+	text-shadow: 0px 4px 1px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+/* ///////////////////////////////////////// */
+/* ////🔼 FIM ESTILIZAÇÃO DO CONTAINER 🔼///// */
+/* ///////////////////////////////////////// */
+
 
 /* 🔽 essa div é usada como espaçamento entre o corpo e footer e para centralizar 🔽*/
 .footer {
