@@ -8,6 +8,7 @@
 	--CorNavGradient1:rgb(96, 146, 22);
 	--CorNavGradient2:rgba(173,255,47,1);
 	--CorTextoCinza: rgb(55, 55, 55);
+	--CorBackgroundQuadro: rgb(255, 182, 182);
 }
 
 
@@ -182,6 +183,7 @@ h1{
 .container {
 	margin-top: 150px;
 	padding: 4rem;
+	width: 80vw;
 	min-height: calc(100vh - 450px); /* 550px = margin-top do container + height do footer */
 	background-color: white;
 	border-radius: 4px;
@@ -227,26 +229,34 @@ h1{
 
 .container-quadro{
 	display: flex;
-	margin: 4em 0;
+	flex-wrap: wrap;
+	flex: 0 0 100%;
+	justify-content: space-between;
+	align-items: center;
+	margin: 4em 4em;
 }
 
 .quadro{
 	display: flex;
+	flex-wrap: wrap;
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin: 2rem;
 	height: 160px;
-	width: 320px;
+	width: 350px;
 	border-radius: 8px;
 	border: 1px solid darkgray;
 	color: var(--CorTextoCinza);
-	background-color: rgb(225, 202, 207);
+	background-color: var(--CorBackgroundQuadro);
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-	padding: 1rem 0rem 1rem 1rem;
-	justify-items: center;
+	padding: 1rem 0rem 1rem 2rem;
 }
 
 .quadro-texto{
 	display: inline;
 	margin: auto 0;
 	text-transform: uppercase;
+	text-align: center;
 	font-size: 1.1em;
 	line-height: 1em;
 }
@@ -255,10 +265,21 @@ h1{
 	padding-top: 0.5em;
 	margin-bottom: 0.5rem;
 }
+
 .quadro-linha2{
 	font-size: 2.05em;
 	padding-top: 0.5em;
 }
+
+#quadro1-3{
+	background-color: rgb(212, 255, 212);
+}
+
+#quadro1-3 .quadro-seta{
+	color: rgb(212, 255, 212);
+	background-color: green;
+}
+
 
 .quadro-seta{
 	margin: 0 auto;
@@ -269,8 +290,10 @@ h1{
 	justify-content: center;
 	background-color: crimson;
 	border-radius: 9999px;
-	color: rgb(225, 202, 207);
+	color: var(--CorBackgroundQuadro);
 	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+	user-select: none;
 }
 
 .seta{
