@@ -42,7 +42,10 @@ body *{
 h1{
 	font-size: 1.5rem; /* Define o tamanho de título h1 igual a 2x a font-size do <html> */
 }
-
+*::selection{
+	color: white;
+	background-color: crimson;
+}
 
 /* 🔽 Inicio de estilização geral 🔽 */
 
