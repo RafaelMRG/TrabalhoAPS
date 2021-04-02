@@ -39,7 +39,7 @@ body *{
 	font-size: 1rem; /* Define tamanho de font-size de todos elem. igual a font-size do <html> */
 }
 h1{
-	font-size: 2rem; /* Define o tamanho de título h1 igual a 2x a font-size do <html> */
+	font-size: 1.5rem; /* Define o tamanho de título h1 igual a 2x a font-size do <html> */
 }
 
 
@@ -217,6 +217,7 @@ h1{
 	height: 2.5em;
 	vertical-align: middle;
 	padding: 0px 0.5em 0px 0px;
+	filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.3));
 }
 
 .container-titulo h1{
@@ -231,7 +232,7 @@ h1{
 	display: flex;
 	flex-wrap: wrap;
 	flex: 0 0 100%;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	align-items: center;
 	margin: 4em 4em;
 }
@@ -248,13 +249,18 @@ h1{
 	border: 1px solid darkgray;
 	color: var(--CorTextoCinza);
 	background-color: var(--CorBackgroundQuadro);
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
 	padding: 1rem 0rem 1rem 2rem;
+	justify-content: space-between;
+}
+
+.quadro-neutro{
+	background-color: lightsteelblue;
 }
 
 .quadro-texto{
 	display: inline;
-	margin: auto 0;
+	margin: auto auto;
 	text-transform: uppercase;
 	text-align: center;
 	font-size: 1.1em;
@@ -262,27 +268,41 @@ h1{
 }
 
 .quadro-linha1{
-	padding-top: 0.5em;
-	margin-bottom: 0.5rem;
+	margin-top: 0.5rem;
+	padding-bottom: 10px;
+	line-height: 1em;
 }
 
 .quadro-linha2{
+	position: relative;
 	font-size: 2.05em;
-	padding-top: 0.5em;
+	padding-top: 0.2em;
+	margin-bottom: -0.6rem;
+	line-height: 1em;
 }
 
-#quadro1-3{
+.quadro-linha3{
+	position: relative;
+	top: -10px;
+	font-size: 0.5em;
+	line-height: 1em;
+}
+
+.quadro-positivo{
 	background-color: rgb(212, 255, 212);
 }
 
-#quadro1-3 .quadro-seta{
+.quadro-positivo .quadro-seta{
 	color: rgb(212, 255, 212);
 	background-color: green;
 }
 
+#quadro3-2 .quadro-linha2{
+	font-size: 1.25em;
+}
 
 .quadro-seta{
-	margin: 0 auto;
+	margin: 0 2rem;
 	display: flex;
 	height: 80px;
 	width: 80px;
@@ -296,6 +316,19 @@ h1{
 	user-select: none;
 }
 
+.quadro-neutro .quadro-seta{
+	color: lightsteelblue;
+	background-color: navy;
+}
+
+.quadro-neutro .seta{
+	line-height: 1.47em;
+}
+
+.lixo{
+	margin-top: 5rem;
+}
+
 .seta{
 	font-size: 5em;
 	line-height: 1.55em;
@@ -303,6 +336,15 @@ h1{
 }
 
 .container-conteudo-txt{
+	width: 90%;
+	margin: 5rem auto;
+	line-height: 1.25em;
+	font-size: 1.25em;
+}
+
+.container-conteudo-txt p::first-letter{
+	font-size: 2em;
+	font-weight: 900;
 }
 
 
