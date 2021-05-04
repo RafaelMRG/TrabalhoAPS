@@ -31,6 +31,8 @@ body {
 	margin: 0;
 	padding: 0;
 	font-size: 10px;
+	background-color: whitesmoke;
+	text-align: center;
 }
 
 /* 🔽 Formatando o tamanho de todos elementos do site para ficar igual o tamanho da borda 🔽 */
@@ -58,13 +60,19 @@ body {
 	transition: 200ms ease;
 }
 
+.relative{
+	position: relative;
+}
+
 
 /* ///////////////////////////////////////// */
 /* ///🔽 INICIO ESTILIZAÇÃO DO NAVBAR 🔽/// */
 /* ///////////////////////////////////////// */
 
 .menu{
+	position: fixed;
 	display: flex;
+	z-index: 999;
 	height: 60px;
 	width: 100vw;
 	background-color: crimson;
@@ -73,7 +81,6 @@ body {
 
 .menu__logo{
 	display: inline-block;
-	position: relative;
 	background: url("/img/IconeCovid.svg") center no-repeat,linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 100%) center no-repeat;
 	background-size: auto 50px,auto 60px;
 	width: 75px;
@@ -81,37 +88,36 @@ body {
 	margin-right: 3rem;
 }
 
-.menu__ul{
+.menu__list{
 	display: flex;
 }
 
-.menu__ul ul{
+.menu__ul{
 	list-style: none;
 	display: flex;
   flex-flow: row nowrap;
 	height: 100%;
 }
 
-.menu__ul ul li{
+.menu__list ul li{
 	margin: auto 1rem;
 	line-height: 2rem;
 }
 
-.menu__ul ul a{
+.menu__list ul a{
 	display: flex;
 	text-decoration: none;
 	color: black;
 }
 
-.menu__ul ul a:hover{
+.menu__list ul a:hover{
 	background-color: white;
 }
 
-.menu__ul ul li p{
+.menu__list ul li p{
 	font-size: 2rem;
 	transform: translateY(0.5rem);
 	text-transform: uppercase;
-
 }
 
 /* ///////////////////////////////////////// */
@@ -123,6 +129,75 @@ body {
 
 
 /* ///////////////////////////////////////// */
+/* ////🔼 INICIO ESTILIZAÇÃO DO FOOTER 🔼///// */
+/* ///////////////////////////////////////// */
+
+.footer{
+	height: 300px;
+	background-color: crimson;
+	margin-top: -100px;
+	display: flex;
+}
+
+.footer__list{
+	margin: auto;
+	padding: 4rem;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+}
+
+.footer__list .menu__ul p{
+	transform:translateY(0.3rem)
+}
+
+.footer__list a{
+	text-decoration: none;
+	color: rgba(0, 0, 0, 0.7);
+	font-weight: 900;
+	line-height: 2rem;
+	padding: 3px 1rem;
+	margin: 0px 0.25rem;
+}
+
+.footer__list a:hover{
+	color: black;
+	background-color: white;
+	border-radius: 5px;
+}
+
+/* ///////////////////////////////////////// */
+/* ////🔼 FIM ESTILIZAÇÃO DO FOOTER 🔼///// */
+/* ///////////////////////////////////////// */
+
+
+
+
+
+/* ///////////////////////////////////////// */
 /* ///🔽 INICIO ESTILIZAÇÃO DO CONTAINER 🔽/// */
 /* ///////////////////////////////////////// */
+
+.barra{
+	z-index: 0;
+	padding-top: 60px;
+}
+
+.barra__img{
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.container{
+	top: -200px;
+	height: 600px;
+	padding: 0;
+	margin: 0px 20%;
+	background-color: white;
+	border-radius: 2rem;
+	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+}
 
