@@ -1,49 +1,52 @@
 /* 🔽 Define as cores do site inteiro aqui como var, ficando facil chamar uma cor em qualquer parte do site 🔽 */
+
 :root {
-	--CorBackgroundBody: rgb(245, 245, 245);
-	--CorShadowNavBar: rgba(0, 0, 0, 0.5);
-	--CorShadowContainer: rgba(14, 36, 7, 0.2);
-	--CorDeepskyblue50: rgba(0, 191, 255, 0.5);
-	--CorTextoSemiPreto: rgb(55, 55, 55);
-	--CorNavGradient1:darkred;
-	--CorNavGradient2:red;
-	--CorTextoCinza: rgb(31, 31, 31);
-	--CorTextoClara: rgb(240, 240, 240);
-	--CorBackgroundQuadro: rgb(255, 182, 182);
-	--CorSubmenuHover: darkred;
-	--CorBackgroundQuadroPos: rgb(212, 255, 212);
+	font-size: 10px;
 }
 
+h1{
+	font-size: 3.2rem;
+}
+
+h2{
+	font-size: 2.4rem;
+}
+
+h3{
+	font-size: 1.6rem;
+}
+
+p{
+	font-size: 1.6rem;
+}
+
+span{
+	font-size: 1.6rem;
+}
 
 /* 🔽 formatando o body 🔽 */
+
 html,
 body {
 	font-family: 'Baloo Tammudu 2', cursive; /* Fonte importada no head do html */
-	font-size: 16px;
 	margin: 0;
 	padding: 0;
-	height: 100%;
-	background-color: var(--CorBackgroundBody); /* Chamei a var CorBackgroundBody, que é rgb(240,240,240) */
-}
-html {
-	display: flex;
-	flex-flow: column nowrap;
-	align-items: center;
-	justify-items: flex-start;
 }
 
 /* 🔽 Formatando o tamanho de todos elementos do site para ficar igual o tamanho da borda 🔽 */
+
 *, *::before, *::after {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
-body *{
-	font-size: 1rem; /* Define tamanho de font-size de todos elem. igual a font-size do <html> */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
-h1{
-	font-size: 1.5rem; /* Define o tamanho de título h1 igual a 2x a font-size do <html> */
-}
+
 *::selection{
 	color: white;
 	background-color: crimson;
@@ -59,409 +62,15 @@ h1{
 /* ///////////////////////////////////////// */
 
 
-
-.navbar {
-	z-index: 2; /* z-index define se vai renderizar por tras ou pela frente */
-	position: fixed; /* fixed define elemento fixo na viewport */
-	top: 0; /* posiciona o elemento a 0px do topo */
-	left: 0; /* posiciona o elemento a 0px da esquerda */
-	background-color: white;
-	width: 100%; /* navbar fica com largura da tela, podemos trocar por 100vw também */
-	box-shadow: 0px 0px 15px var(--CorShadowNavBar); /* sombra */
-}
-.navbar *, .navbar *::after, .navbar *::before{
-	/* aplica transição em todos elementos da navbar */
-	transition: all 300ms ease-in-out, max-height 250ms ease;
-}
-.navbar ul{
-	list-style: none;	/* Tira os pontos do inicio da lista */
-	position: relative;
-	float: right; /* flutua elementos ul para a direita */
-	margin-right: 12%;	/* espaçamento a direita da tela */
-}
-.navbar ul li{
-	position: relative;
-	float: left; /* flutua elementos li dentro de elementos ul para a esquerda */
-	border-left: 1px solid rgba(0, 0, 0, 0.2); /* borda preta */
-}
-.navbar > ul > li:last-child{
-	/* aplica borda preta no lado direito do ultimo li dentro do primeiro li do primeiro ul */
-	border-right: 1px solid rgba(0, 0, 0, 0.2);
-}
-.navbar ul li a{
-	padding: 20px 1vw; /* define a largura dos botões */
-	display: block;
-	color: var(--CorTextoSemiPreto); /* define a cor do texto */
-	letter-spacing: 1px;
-	text-decoration: none;
-	text-transform: uppercase;
-}
-.navbar ul li:hover > a{
-	text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.25);
-}
-.navbar > ul > li::before{
-	/*
-	usamos o pseudoelemento :before para criar um efeito de transição
-	com o linear-gradient, que por padrão não é uma opção transicionavel
-	por esse motivo usamos então a transição na opacidade do elemento inteiro
-	, foi decidido usar o :before porque é um elemento que pega a geometria do
-	elemento real mas não tem conteúdo (invisivel sem ter o linear-gradient aplicado)
-	*/
-	z-index: -1; /* posiciona o pseudoelemento atrás do texto */
-	content: ""; /* define esse pseudoelemento como sem conteudo para deixar invisivel */
-	display: block;
-	position: absolute; /* necessário usar absolute para pegar a geometria do elemento real */
-	top: 0;
-	bottom: 0;
-	right: 0;
-	left: 0;
-	/* todas 4 opções de posicionamento acima diz para o renderizador onde deve ser
-	a borda do pseudoelemento, então a borda do pseudoelemento vai ser 0px a esquerda, topo,
-	fundo e direita do elemento real */
-	background: linear-gradient(0deg, var(--CorNavGradient1) 0%, var(--CorNavGradient2) 100%);
-	opacity: 0%;
-}
-.navbar > ul > li:hover:before{
-	/* muda as propriedades do pseudoelemento :before quando passar o mouse em cima */
-	opacity: 75%;
-	pointer-events: none;
-}
-.navbar ul ul{
-	/* opções do submenu */
-	visibility: hidden; /* deixa o submenu invisivel como estado inicial */
-	display: block;
-	position: absolute;
-	top: 100%;
-	transform: translateX(-1px);
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	width: max-content;
-	/*
-	🔼
-	a largura vai ser o tamanho do maior elemento filho do submenu
-	muda de tamanho ao mudar o texto do link (responsivo)
-	*/
-	background: white;
-	max-height: 0%; /* submenu vai ter 0% de altura, estado inicial, vai pra 300% no hover */
-	overflow: hidden;
-}
-.navbar ul li:hover > ul{
-	/* max-height deve ser o (nº de submenus * 100%)
-	define a visibilidade e tamanho do submenu
-	*/
-	max-height: 300%;/* (3 submenus * 100%) = 300%, a transição vai de 0% a 300%*/
-	visibility: visible;
-}
-.navbar ul ul li{
-	/* estilização dos elementos do submenu */
-	position: relative;
-	float: none;
-	/* tirar o float deixa os elementos ficarem um acima do outro em vez de flutuar todos para um lado na mesma linha */
-	border: none; /* reseta a borda */
-	border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* agora setamos a borda bottom */
-}
-.navbar ul ul li:hover{
-	/* quando passar o mouse nos elementos do submenu, vão pegar a cor verde */
-	background: var(--CorSubmenuHover);
-}
-.navbar ul p{
-	/* ajustes do alinhamento de texto
-	fonte que importamos do google tem um padding embutido
-	cheguei a esse valor testando e usando o inspecionar elemento
-	até aparentar estar centralizado verticalmente
-	*/
-	line-height: 100%;
-	padding-top: 0.8ch;
-}
-
-
-
 /* ///////////////////////////////////////// */
 /* ////🔼 FIM ESTILIZAÇÃO DO NAVBAR 🔼///// */
 /* ///////////////////////////////////////// */
+
+
+
+
 
 /* ///////////////////////////////////////// */
 /* ///🔽 INICIO ESTILIZAÇÃO DO CONTAINER 🔽/// */
 /* ///////////////////////////////////////// */
 
-
-
-/* 🔽 essa class contem o conteudo 🔽 */
-.container {
-	margin-top: 150px;
-	padding: 4rem;
-	width: 80vw;
-	min-height: calc(100vh - 450px); /* 550px = margin-top do container + height do footer */
-	background-color: white;
-	border-radius: 4px;
-	box-shadow: 0px 5px 18px var(--CorShadowContainer);
-}
-
-.container-titulo{
-	box-sizing: content-box;
-	overflow: hidden;
-	display: inline-block;
-	height: 2.5em;
-	padding: 0.3em 1em 0.3em 1em;
-	vertical-align: middle;
-	text-transform: uppercase;
-	border-radius: 9999px;
-	/* background-color: lawngreen; */
-	background: rgba(200, 0, 0, 1);
-	box-shadow: 0px 2px 0.8em rgba(80, 80, 80, 0.5);
-	cursor: pointer;
-	color: var(--CorTextoClara);
-	transition: all 300ms ease-in-out;
-}
-
-.container-titulo img{
-	opacity: 85%;
-	display: inline;
-	height: 2.5em;
-	vertical-align: middle;
-	padding: 0px 0.5em 0px 0px;
-	filter: drop-shadow(0px 0px 5px rgba(0,0,0,0.3));
-}
-
-.container-titulo h1{
-	display: inline-block;
-	line-height: 0.5em;
-	padding-top: 0.5em;/* fonte vem com um padding padrão, isso balanceia o padding dos 2 lados */
-	vertical-align: middle;
-	white-space: pre; /* não colapsa espaços brancos em 1 */
-}
-
-.container-quadro{
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	margin: 4em 4em;
-}
-
-.quadro{
-	display: flex;
-	flex-wrap: wrap;
-	flex-grow: 0;
-	flex-shrink: 0;
-	margin: 2rem;
-	height: 160px;
-	width: 350px;
-	border-radius: 8px;
-	border: 1px solid darkgray;
-	color: var(--CorTextoCinza);
-	background-color: var(--CorBackgroundQuadro);
-	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-	padding: 1rem 0rem 1rem 2rem;
-	justify-content: space-between;
-}
-
-.quadro-neutro{
-	background-color: lightsteelblue;
-}
-
-.quadro-texto{
-	display: inline;
-	margin: auto auto;
-	text-transform: uppercase;
-	text-align: center;
-	font-size: 1.1em;
-	line-height: 1em;
-}
-
-.quadro-linha1{
-	margin-top: 0.5rem;
-	padding-bottom: 10px;
-	line-height: 1em;
-}
-
-.quadro-linha2{
-	position: relative;
-	font-size: 2.05em;
-	padding-top: 0.2em;
-	margin-bottom: -0.6rem;
-	line-height: 1em;
-}
-
-.quadro-linha3{
-	position: relative;
-	top: -10px;
-	font-size: 0.5em;
-	line-height: 1em;
-}
-
-.quadro-positivo{
-	background-color: var(--CorBackgroundQuadroPos);
-}
-
-.quadro-positivo .quadro-seta{
-	color: var(--CorBackgroundQuadroPos);
-	background-color: green;
-}
-
-#quadro3-2 .quadro-linha2{
-	font-size: 1.25em;
-}
-
-.quadro-seta{
-	margin: 0 2rem;
-	display: flex;
-	height: 80px;
-	width: 80px;
-	align-self: center;
-	justify-content: center;
-	background-color: crimson;
-	border-radius: 9999px;
-	color: var(--CorBackgroundQuadro);
-	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
-	overflow: hidden;
-	user-select: none;
-}
-
-.quadro-neutro .quadro-seta{
-	color: lightsteelblue;
-	background-color: navy;
-}
-
-.quadro-neutro .seta{
-	line-height: 1.47em;
-}
-
-.lixo{
-	margin-top: 5rem;
-}
-
-.seta{
-	font-size: 5em;
-	line-height: 1.55em;
-	text-shadow: 0px 4px 1px rgba(0, 0, 0, 0.5);
-}
-
-.container-conteudo-txt{
-	display: flex;
-	width: 100%;
-	margin: 2rem auto 5rem auto;
-	line-height: 1.25em;
-	font-size: 1.25em;
-	justify-content: space-evenly;
-	flex-flow: row wrap;
-}
-
-.container-conteudo-txt.impct-geral p{
-	padding: 1rem 0;
-	text-align: center;
-	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3),3px 3px 10px rgba(0, 0, 0, 0.3);
-}
-
-.container-conteudo-txt.texto-pandemia p{
-	line-height: 2em;
-	text-align: justify;
-	text-indent: 2rem;
-}
-
-.container-conteudo-txt.texto-pandemia p::first-letter{
-	font-size: 1.5em;
-}
-
-.container-conteudo-txt.impct-geral div{
-	box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.25);
-	border-radius: 16px;
-	padding: 2rem;
-	width: 600px;
-	flex: 0 0 auto;
-	margin: 3rem 0;
-}
-
-.impct-positivo{
-	border: 4px solid darkseagreen;
-	background-color: var(--CorBackgroundQuadroPos);
-}
-
-.impct-negativo{
-	border: 4px solid lightcoral;
-	background-color: var(--CorBackgroundQuadro);
-}
-
-.container-conteudo-txt.texto-pandemia img{
-	border: 1px solid crimson;
-	border-radius: 8px;
-	box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
-}
-
-#SIN{
-	padding: 1rem;
-	display: inline-block;
-	width: 500px;
-}
-
-#chart{
-	padding: 1rem;
-	width: 500px;
-}
-
-#energia-renovavel{
-	padding: 1rem;
-	width: 500px;
-}
-
-.container-conteudo-txt.texto-pandemia div{
-	width: 100%;
-	display: flex;
-	align-items: center;
-	margin: 2rem auto;
-}
-
-.texto-sin{
-	display: inline-block;
-	margin: auto 3rem;
-	width: 60%;
-}
-
-/* ///////////////////////////////////////// */
-/* ////🔼 FIM ESTILIZAÇÃO DO CONTAINER 🔼///// */
-/* ///////////////////////////////////////// */
-
-
-/* 🔽 essa div é usada como espaçamento entre o corpo e footer e para centralizar 🔽*/
-.footer {
-	width: 80vw;
-	position: relative;
-	display: flex;
-	height: 400px;
-	align-items: center;
-	justify-items: center;
-}
-
-/*🔽 essa div vai dentro da .footer, sendo centralizada e espaçada pela config do .footer 🔽*/
-.footer-inner {
-	position: relative;
-	display: flex;
-	padding: 0 6rem;
-	width: 100%;
-	height: 300px;
-	background-color: white;
-	border-radius: 4px;
-	box-shadow: 0px 5px 18px var(--CorShadowContainer);
-}
-
-.footer-inner ul{
-	list-style: square inside;
-	margin: auto 0;
-}
-
-.footer-inner a{
-	text-decoration: none;
-	color: black;
-	text-transform: uppercase;
-	font-size: 1.25em;
-	transition: all 300ms ease-in-out;
-}
-
-.footer-inner li{
-	transition: all 300ms ease-in-out;
-}
-
-.footer-inner li:hover,.footer-inner li:hover a{
-	color: crimson;
-	text-shadow: 0px 0px 6px rgba(220, 20, 60, 0.5);
-	text-decoration: underline;
-}
