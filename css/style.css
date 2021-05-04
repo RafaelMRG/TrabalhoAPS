@@ -1,7 +1,7 @@
 /* 🔽 Define as cores do site inteiro aqui como var, ficando facil chamar uma cor em qualquer parte do site 🔽 */
 
-:root {
-}
+/* :root{
+} */
 
 h1{
 	font-size: 3.2rem;
@@ -75,7 +75,7 @@ body {
 	z-index: 999;
 	height: 60px;
 	width: 100vw;
-	background-color: crimson;
+	background-color: rgba(220, 20, 60, 0.6);
 	padding: 0 20%;
 }
 
@@ -124,13 +124,9 @@ body {
 /* ////🔼 FIM ESTILIZAÇÃO DO NAVBAR 🔼///// */
 /* ///////////////////////////////////////// */
 
-
-
-
-
-/* ///////////////////////////////////////// */
-/* ////🔼 INICIO ESTILIZAÇÃO DO FOOTER 🔼///// */
-/* ///////////////////////////////////////// */
+/* ////////////////////////////////////////// */
+/* ///🔽 INICIO ESTILIZAÇÃO DO FOOTER 🔽//// */
+/* ////////////////////////////////////////// */
 
 .footer{
 	height: 300px;
@@ -180,6 +176,7 @@ body {
 .barra{
 	z-index: 0;
 	padding-top: 60px;
+	background-color: crimson;
 }
 
 .barra__img{
@@ -192,12 +189,83 @@ body {
 }
 
 .container{
+	display: flex;
+	flex-flow: column wrap;
 	top: -200px;
 	height: 600px;
 	padding: 0;
 	margin: 0px 20%;
+	padding: 2rem 4rem;
 	background-color: white;
 	border-radius: 2rem;
 	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
 }
 
+.container__titulo{
+	margin: 0px auto;
+}
+
+.container__cards{
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	padding: 1rem;
+	background-color: black;
+	justify-content: space-around;
+}
+
+.cards__card{
+	display: flex;
+	width: 300px;
+	height: 160px;
+	padding: 1.5rem 0.25rem;
+	background-color: white;
+	border-radius: 1rem;
+	text-transform: uppercase;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.cards__card h3{
+	display: inline-block;
+	line-height: 1.8rem;
+	font-weight: 700;
+	color:rgb(100, 100, 100);
+}
+
+.cards__card p{
+	position: relative;
+	line-height: 0.8rem;
+	font-size: 3rem;
+	font-weight: 200;
+	color: rgb(65, 65, 65);
+	padding-top: 1.4rem;
+}
+
+.card__texto h3:last-of-type{
+	margin-top: 2rem;
+}
+
+
+.card__seta img{
+	display: block;
+	margin: auto 0px;
+	width: 100px;
+	opacity: 75%;
+}
+
+.card--BordaGreen{
+	border-top: 0.5rem solid;
+	border-color: lawngreen;
+}
+
+.card--BordaRed{
+	border-top: 0.5rem solid;
+	border-color: red;
+}
+
+.card--BordaAzul{
+border-top: 0.5rem solid;
+border-color: royalblue;
+}
