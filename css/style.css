@@ -1,7 +1,6 @@
 /* 🔽 Define as cores do site inteiro aqui como var, ficando facil chamar uma cor em qualquer parte do site 🔽 */
 
 :root {
-	font-size: 10px;
 }
 
 h1{
@@ -31,6 +30,7 @@ body {
 	font-family: 'Baloo Tammudu 2', cursive; /* Fonte importada no head do html */
 	margin: 0;
 	padding: 0;
+	font-size: 10px;
 }
 
 /* 🔽 Formatando o tamanho de todos elementos do site para ficar igual o tamanho da borda 🔽 */
@@ -54,13 +54,65 @@ body {
 
 /* 🔽 Inicio de estilização geral 🔽 */
 
-
+.trans{
+	transition: 200ms ease;
+}
 
 
 /* ///////////////////////////////////////// */
 /* ///🔽 INICIO ESTILIZAÇÃO DO NAVBAR 🔽/// */
 /* ///////////////////////////////////////// */
 
+.menu{
+	display: flex;
+	height: 60px;
+	width: 100vw;
+	background-color: crimson;
+	padding: 0 20%;
+}
+
+.menu__logo{
+	display: inline-block;
+	position: relative;
+	background: url("/img/IconeCovid.svg") center no-repeat,linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 100%) center no-repeat;
+	background-size: auto 50px,auto 60px;
+	width: 75px;
+	height: 100%;
+	margin-right: 3rem;
+}
+
+.menu__ul{
+	display: flex;
+}
+
+.menu__ul ul{
+	list-style: none;
+	display: flex;
+  flex-flow: row nowrap;
+	height: 100%;
+}
+
+.menu__ul ul li{
+	margin: auto 1rem;
+	line-height: 2rem;
+}
+
+.menu__ul ul a{
+	display: flex;
+	text-decoration: none;
+	color: black;
+}
+
+.menu__ul ul a:hover{
+	background-color: white;
+}
+
+.menu__ul ul li p{
+	font-size: 2rem;
+	transform: translateY(0.5rem);
+	text-transform: uppercase;
+
+}
 
 /* ///////////////////////////////////////// */
 /* ////🔼 FIM ESTILIZAÇÃO DO NAVBAR 🔼///// */
