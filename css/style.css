@@ -351,6 +351,9 @@ background-color: aliceblue;
 .conteudo__texto{
 	width: 70%;
 	padding: 1rem 5rem 3rem 3rem;
+}
+
+.conteudo__texto p{
 	text-indent: 2.5rem;
 }
 
@@ -392,6 +395,7 @@ background-color: aliceblue;
 	top: -1.5rem;
 	color: lightcoral;
 }
+
 .texto__breadcrumb{
 	display: inline-block;
 	font-size: 1.2rem;
@@ -400,9 +404,7 @@ background-color: aliceblue;
 	color: white;
 	border-radius: 999px;
 	background-color: crimson;
-	text-indent: initial;
 	padding: 0.5rem 1rem 0 1rem;
-	height: min-content;
 	margin-bottom: 1rem;
 	pointer-events: none;
 	user-select: none;
