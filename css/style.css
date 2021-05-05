@@ -16,7 +16,7 @@ h3{
 }
 
 p{
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 }
 
 span{
@@ -222,7 +222,7 @@ body {
 	flex-flow: row nowrap;
 	align-items: center;
 	justify-content: space-around;
-	box-shadow: 0px 0px 20px rgb(190, 190, 190);
+	box-shadow: 0px 0px 10px rgb(210, 210, 210);
 }
 
 .cards__card h3{
@@ -275,6 +275,7 @@ background-color: aliceblue;
 	flex-flow: column nowrap;
 	padding: 0;
 	height: auto;
+	margin-bottom: 4rem;
 }
 
 .card__linha:last-child{
@@ -327,3 +328,45 @@ background-color: aliceblue;
 	width: 10%;
 }
 
+.container__conteudo{
+	display: flex;
+	flex-flow: row nowrap;
+	width: 100%;
+	text-align: justify;
+	font-weight: 500;
+	line-height: 2rem;
+}
+
+.conteudo__texto{
+	width: 70%;
+	padding: 1rem 5rem 3rem 3rem;
+	text-indent: 2.5rem;
+}
+
+.conteudo__links{
+	width: 30%;
+	background-color: crimson;
+	border-radius: 2rem;
+	padding: 2rem;
+	color: rgb(215, 215, 215);
+}
+
+.conteudo__links p{
+	margin: 0.2rem 0;
+}
+
+.conteudo__links h3{
+	margin: 0 0 1rem 0;
+}
+
+.conteudo__links a{
+	display: inline-block;
+	text-decoration: none;
+	color: seashell;
+	filter: hue-rotate(0deg);
+}
+
+.conteudo__links a:hover{
+	color: tan;
+	font-weight: 900;
+}
