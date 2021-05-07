@@ -100,7 +100,7 @@ body {
 .menu__ul{
 	list-style: none;
 	display: flex;
-  flex-flow: row nowrap;
+	flex-flow: row nowrap;
 	height: 100%;
 }
 
@@ -120,7 +120,8 @@ body {
 }
 
 .menu__list ul li p{
-	font-size: 2rem;
+	font-size: 1.5rem;
+	font-weight: 600;
 	transform: translateY(0.5rem);
 	text-transform: uppercase;
 }
