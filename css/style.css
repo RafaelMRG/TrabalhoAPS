@@ -1,28 +1,18 @@
-/* 🔽 Define as cores do site inteiro aqui como var, ficando facil chamar uma cor em qualquer parte do site 🔽 */
-
-/* :root{
-} */
-
 h1{
 	font-size: 3.2rem;
 }
-
 h2{
 	font-size: 2.4rem;
 }
-
 h3{
 	font-size: 1.6rem;
 }
-
 p{
 	font-size: 1.5rem;
 }
-
 span{
 	font-size: 1.6rem;
 }
-
 /* 🔽 formatando o body 🔽 */
 
 html,
@@ -34,7 +24,6 @@ body {
 	background-color: whitesmoke;
 	text-align: center;
 }
-
 /* 🔽 Formatando o tamanho de todos elementos do site para ficar igual o tamanho da borda 🔽 */
 
 *, *::before, *::after {
@@ -42,32 +31,26 @@ body {
 	margin: 0;
 	padding: 0;
 }
-
 .clearfix::after{
 	content: "";
 	clear: both;
 	display: table;
 }
-
 *::selection{
-	color: lightgray;
+	color: lightcoral;
 }
-
 /* 🔽 Inicio de estilização geral 🔽 */
 
 .trans{
 	transition: 200ms ease;
 }
-
 .relative{
 	position: relative;
 }
-
 .align-titulo-ext{
 	text-align: start;
 	line-height: 6rem;
 }
-
 
 
 /* ///////////////////////////////////////// */
@@ -83,7 +66,6 @@ body {
 	background-color: rgba(220, 20, 60, 0.6);
 	padding: 0 20%;
 }
-
 .menu__logo{
 	display: inline-block;
 	background: url("../img/IconeCovid.svg") center no-repeat,linear-gradient(0deg, rgba(230,230,230,1) 0%, rgba(255,255,255,1) 100%) center no-repeat;
@@ -92,40 +74,33 @@ body {
 	height: 100%;
 	margin-right: 3rem;
 }
-
 .menu__list{
 	display: flex;
 }
-
 .menu__ul{
 	list-style: none;
 	display: flex;
 	flex-flow: row nowrap;
 	height: 100%;
 }
-
 .menu__list ul li{
 	margin: auto 1rem;
 	line-height: 2rem;
 }
-
 .menu__list ul a{
 	display: flex;
 	text-decoration: none;
 	color: black;
 }
-
 .menu__list ul a:hover{
 	background-color: white;
 }
-
 .menu__list ul li p{
 	font-size: 1.5rem;
 	font-weight: 600;
 	transform: translateY(0.5rem);
 	text-transform: uppercase;
 }
-
 /* ///////////////////////////////////////// */
 /* ////🔼 FIM ESTILIZAÇÃO DO NAVBAR 🔼///// */
 /* ///////////////////////////////////////// */
@@ -140,18 +115,15 @@ body {
 	margin-top: -100px;
 	display: flex;
 }
-
 .footer__list{
 	margin: auto;
 	padding: 4rem;
 	border-top: 1px solid white;
 	border-bottom: 1px solid white;
 }
-
 .footer__list .menu__ul p{
 	transform:translateY(0.3rem)
 }
-
 .footer__list a{
 	text-decoration: none;
 	color: rgba(0, 0, 0, 0.7);
@@ -160,13 +132,11 @@ body {
 	padding: 3px 1rem;
 	margin: 0px 0.25rem;
 }
-
 .footer__list a:hover{
 	color: black;
 	background-color: white;
 	border-radius: 5px;
 }
-
 /* ///////////////////////////////////////// */
 /* ////🔼 FIM ESTILIZAÇÃO DO FOOTER 🔼///// */
 /* ///////////////////////////////////////// */
@@ -184,7 +154,6 @@ body {
 	padding-top: 60px;
 	background-color: crimson;
 }
-
 .barra__img{
 	position: relative;
 	display: block;
@@ -193,7 +162,6 @@ body {
 	width: 100%;
 	overflow: hidden;
 }
-
 .container{
 	display: flex;
 	flex-flow: column wrap;
@@ -205,16 +173,13 @@ body {
 	border-radius: 2rem;
 	box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
 }
-
 .container--extrapad{
 	padding-top: 4rem;
 }
-
 .container__titulo{
 	color: maroon;
 	margin: 0px auto;
 }
-
 .container__cards{
 	display: flex;
 	flex-flow: row wrap;
@@ -223,7 +188,6 @@ body {
 	justify-content: space-between;
 	margin-top: 4rem;
 }
-
 .cards__card{
 	display: flex;
 	width: 300px;
@@ -236,14 +200,12 @@ body {
 	justify-content: space-around;
 	box-shadow: 0px 0px 10px rgb(210, 210, 210);
 }
-
 .cards__card h3{
 	display: inline-block;
 	line-height: 1.8rem;
 	font-weight: 700;
 	color:rgb(100, 100, 100);
 }
-
 .cards__card p{
 	position: relative;
 	line-height: 0.8rem;
@@ -252,11 +214,9 @@ body {
 	color: rgb(65, 65, 65);
 	padding-top: 1.4rem;
 }
-
 .card__texto h3:last-of-type{
 	margin-top: 2rem;
 }
-
 
 .card__seta img{
 	display: block;
@@ -264,22 +224,18 @@ body {
 	width: 100px;
 	/* opacity: 75%; */
 }
-
 .card--BordaGreen{
 	border-top: 0.5rem solid lawngreen;
 	background-color: honeydew;
 }
-
 .card--BordaRed{
 	border-top: 0.5rem solid red;
 	background-color: mistyrose;
 }
-
 .card--BordaAzul{
 border-top: 0.5rem solid royalblue;
 background-color: aliceblue;
 }
-
 .card--tabela{
 	width: 100%;
 	align-items: flex-start;
@@ -289,11 +245,9 @@ background-color: aliceblue;
 	height: auto;
 	margin-bottom: 4rem;
 }
-
 .card__linha:last-child{
 	border-bottom: none;
 }
-
 .card__linha{
 	width: 100%;
 	padding: 1rem;
@@ -303,43 +257,34 @@ background-color: aliceblue;
 	border-bottom: 1px solid lightblue;
 	white-space: pre;
 }
-
 .card__linha p{
 	padding-top: 0.8rem;
 	font-size: 1.2rem;
 	font-weight: 600;
 	line-height: 0.8rem;
 }
-
 .card__linha h3{
 	padding-top: 1.2rem;
 	line-height: 1.2rem;
 }
-
 .linha__1{
 	width: 45%;
 }
-
 .linha__2{
 	width: 8%;
 }
-
 .linha__3{
 	width: 8%;
 }
-
 .linha__4{
 	width: 15%;
 }
-
 .linha__5{
 	width: 15%;
 }
-
 .linha__6{
 	width: 10%;
 }
-
 .container__conteudo{
 	display: flex;
 	flex-flow: row nowrap;
@@ -349,12 +294,10 @@ background-color: aliceblue;
 	line-height: 2rem;
 	margin-top: 1rem;
 }
-
 .conteudo__texto{
 	width: 70%;
 	padding: 1rem 6rem 3rem 3rem;
 }
-
 .conteudo__texto::after{
 	position: absolute;
 	content: "";
@@ -363,16 +306,13 @@ background-color: aliceblue;
 	top: 6rem;
 	border-right: 1px solid mistyrose;
 }
-
 .conteudo__texto p{
 	text-indent: 2.5rem;
 	margin-bottom: 0.5rem;
 }
-
 .texto--padtop0{
 	padding-top: 0;
 }
-
 .conteudo__links{
 	width: 30%;
 	height: min-content;
@@ -381,33 +321,27 @@ background-color: aliceblue;
 	padding: 2rem;
 	color: rgb(250, 250, 250);
 }
-
 .conteudo__links p{
 	margin: 0.2rem 0;
 }
-
 .conteudo__links h3{
 	margin: 0 0 1rem 0;
 }
-
 .conteudo__links a{
 	display: inline-block;
 	text-decoration: none;
 	color: lightgray;
 	filter: hue-rotate(0deg);
 }
-
 .conteudo__links a:hover{
 	color: white;
 	font-weight: 900;
 }
-
 .texto__publicado{
 	font-size: 1.2rem;
 	top: -1.5rem;
 	color: lightcoral;
 }
-
 .texto__breadcrumb{
 	display: inline-block;
 	font-size: 1.2rem;
@@ -421,32 +355,27 @@ background-color: aliceblue;
 	pointer-events: none;
 	user-select: none;
 }
-
 .texto__breadcrumb a{
 	text-decoration: none;
 	color: inherit;
 	pointer-events: all;
 }
-
 .texto__breadcrumb a:hover{
 	color: tan;
 }
-
 .tables{
 	display: flex;
 	justify-content: center;
 	margin: 3rem;
 	overflow-x:auto;
 }
-
 .imagem-stock{
 	margin: 1rem;
 	border-radius: 2rem;
 	border: 0.5rem solid crimson;
 	width: 60%;
 	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
-}
-/* //////////////////////////// */
+}/* //////////////////////////// */
 /* /////////// ID's /////////// */
 /* //////////////////////////// */
 
@@ -455,68 +384,50 @@ background-color: aliceblue;
 	line-height: 1rem;
 	empty-cells: hide;
 	border-spacing: 1rem;
-}
-
-#tabela-de-consumo *{
+}#tabela-de-consumo *{
 	position: relative;
 	text-align: center;
-}
-
-#tabela-de-consumo th {
+}#tabela-de-consumo th {
 	background-color: rgba(220, 20, 60, 0.1);
-}
-
-#tabela-de-consumo td{
+}#tabela-de-consumo td{
 	text-transform: capitalize;
-}
-
-#tabela-de-consumo td, #tabela-de-consumo th {
+}#tabela-de-consumo td, #tabela-de-consumo th {
 	border: 1px solid #ddd;
 	padding: 1rem 1rem 0.5rem 1rem;
 	border-radius: 9999px;
 	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
 }
-
 /* RESPONSIVIDADE MOBILE ABAIXO */
 @media (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1){
 
 	html,
 	body {
 	font-size: 8px;
-}
-	.menu{
+	}	.menu{
 		position: relative;
 		background-color: crimson;
 		width: 100vw;
 		height: min-content;
-	}
-	.menu *{
+	}	.menu *{
 		justify-content: center;
-	}
-	.menu__logo{
+	}	.menu__logo{
 		display: none;
-	}
-	.menu__ul{
+	}	.menu__ul{
 		flex-flow: column wrap;
 		background-color: whitesmoke;
 		border-radius: 1rem;
 		padding: 1rem;
-	}
-	.menu__ul a{
+	}	.menu__ul a{
 		border-bottom: 1px solid lightgray
-	}
-	.menu__ul a:last-child{
+	}	.menu__ul a:last-child{
 		border-bottom: none
-	}
-	.menu__list{
+	}	.menu__list{
 		margin: 2rem auto;
-	}
-	.container {
+	}	.container {
 		margin: 0px 2%;
 		padding: 2rem 1rem 1em;
 		top: 10px;
-	}
-	.container__conteudo {
+	}	.container__conteudo {
 		display: flex;
 		flex-flow: column-reverse nowrap;
 		width: 100%;
@@ -524,68 +435,49 @@ background-color: aliceblue;
 		font-weight: 500;
 		line-height: 2rem;
 		margin-top: 1rem;
-	}
-	.conteudo__texto {
+	}	.conteudo__texto {
 		padding: 1rem 1rem 3rem 1rem;
 		width: 100%;
-	}
-	.conteudo__texto::after {
+	}	.conteudo__texto::after {
 		display: none;
-	}
-	.conteudo__links {
+	}	.conteudo__links {
 		width: 50%;
 		align-self: center;
 		text-align: center;
 		background-color: crimson;
 		border-radius: 2rem;
 		margin: 1rem 2rem 2rem 2rem;
-	}
-	.barra {
+	}	.barra {
 		z-index: 0;
 		padding-top: 0px;
 		background-color: transparent;
-	}
-
-	.footer{
+	}	.footer{
 		margin-top: 5rem;
-	}
-	.card__linha{
+	}	.card__linha{
 		padding: 0.5rem;
-	}
-	#container__cards-1 > div{
+	}	#container__cards-1 > div{
 		margin: 1rem auto;
-	}
-	#container__cards-2 *{
+	}	#container__cards-2 *{
 		font-size: 0.8rem!important;
-	}
-	.linha__1{
+	}	.linha__1{
 		width: 20%;
-	}
-	.linha__2{
+	}	.linha__2{
 		width: 11%;
-	}
-	.linha__3{
+	}	.linha__3{
 		width: 11%;
-	}
-	.linha__4{
+	}	.linha__4{
 		width: 20%;
-	}
-	.linha__5{
+	}	.linha__5{
 		width: 20%;
-	}
-	.linha__6{
+	}	.linha__6{
 		width: 14%;
-	}
-	.tables{
+	}	.tables{
 		margin: 1rem 0;
 		overflow-x: visible;
-	}
-	#tabela-de-consumo{
+	}	#tabela-de-consumo{
 		max-width: 90%;
 		border-spacing: 0.25rem;
-	}
-	#tabela-de-consumo th, #tabela-de-consumo td{
+	}	#tabela-de-consumo th, #tabela-de-consumo td{
 		padding: 1rem 0.5rem 0rem 0.5rem;
 		line-height: 1.5rem;
-	}
-}
+	}}
