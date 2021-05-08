@@ -476,3 +476,116 @@ background-color: aliceblue;
 	border-radius: 9999px;
 	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
 }
+
+/* RESPONSIVIDADE MOBILE ABAIXO */
+@media (max-width: 1200px) and (-webkit-min-device-pixel-ratio: 1){
+
+	html,
+	body {
+	font-size: 8px;
+}
+	.menu{
+		position: relative;
+		background-color: crimson;
+		width: 100vw;
+		height: min-content;
+	}
+	.menu *{
+		justify-content: center;
+	}
+	.menu__logo{
+		display: none;
+	}
+	.menu__ul{
+		flex-flow: column wrap;
+		background-color: whitesmoke;
+		border-radius: 1rem;
+		padding: 1rem;
+	}
+	.menu__ul a{
+		border-bottom: 1px solid lightgray
+	}
+	.menu__ul a:last-child{
+		border-bottom: none
+	}
+	.menu__list{
+		margin: 2rem auto;
+	}
+	.container {
+		margin: 0px 2%;
+		padding: 2rem 1rem 1em;
+		top: 10px;
+	}
+	.container__conteudo {
+		display: flex;
+		flex-flow: column-reverse nowrap;
+		width: 100%;
+		text-align: justify;
+		font-weight: 500;
+		line-height: 2rem;
+		margin-top: 1rem;
+	}
+	.conteudo__texto {
+		padding: 1rem 1rem 3rem 1rem;
+		width: 100%;
+	}
+	.conteudo__texto::after {
+		display: none;
+	}
+	.conteudo__links {
+		width: 50%;
+		align-self: center;
+		text-align: center;
+		background-color: crimson;
+		border-radius: 2rem;
+		margin: 1rem 2rem 2rem 2rem;
+	}
+	.barra {
+		z-index: 0;
+		padding-top: 0px;
+		background-color: transparent;
+	}
+
+	.footer{
+		margin-top: 5rem;
+	}
+	.card__linha{
+		padding: 0.5rem;
+	}
+	#container__cards-1 > div{
+		margin: 1rem auto;
+	}
+	#container__cards-2 *{
+		font-size: 0.8rem!important;
+	}
+	.linha__1{
+		width: 20%;
+	}
+	.linha__2{
+		width: 11%;
+	}
+	.linha__3{
+		width: 11%;
+	}
+	.linha__4{
+		width: 20%;
+	}
+	.linha__5{
+		width: 20%;
+	}
+	.linha__6{
+		width: 14%;
+	}
+	.tables{
+		margin: 1rem 0;
+		overflow-x: visible;
+	}
+	#tabela-de-consumo{
+		max-width: 90%;
+		border-spacing: 0.25rem;
+	}
+	#tabela-de-consumo th, #tabela-de-consumo td{
+		padding: 1rem 0.5rem 0rem 0.5rem;
+		line-height: 1.5rem;
+	}
+}
