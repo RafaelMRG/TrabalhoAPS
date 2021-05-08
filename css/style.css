@@ -352,7 +352,7 @@ background-color: aliceblue;
 
 .conteudo__texto{
 	width: 70%;
-	padding: 1rem 5rem 3rem 3rem;
+	padding: 1rem 6rem 3rem 3rem;
 }
 
 .conteudo__texto::after{
@@ -432,7 +432,20 @@ background-color: aliceblue;
 	color: tan;
 }
 
+.tables{
+	display: flex;
+	justify-content: center;
+	margin: 3rem;
+	overflow-x:auto;
+}
 
+.imagem-stock{
+	margin: 1rem;
+	border-radius: 2rem;
+	border: 0.5rem solid crimson;
+	width: 60%;
+	box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+}
 /* //////////////////////////// */
 /* /////////// ID's /////////// */
 /* //////////////////////////// */
@@ -462,11 +475,4 @@ background-color: aliceblue;
 	padding: 1rem 1rem 0.5rem 1rem;
 	border-radius: 9999px;
 	box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.1);
-}
-
-.tables{
-	display: flex;
-	justify-content: center;
-	margin: 3rem;
-	overflow-x:auto;
 }
