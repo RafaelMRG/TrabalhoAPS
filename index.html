@@ -6,237 +6,248 @@
 	<link rel="stylesheet" href="css/style.css">
 	<title>Impacto Ambiental Na Pandemia</title>
 	<style>
-		@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap');
 		/* fonte importada do google fonts usando o método @import */
 	</style>
 </head>
-<body>
-
-	<div class="navbar">
-
-		<ul>
-
-			<li><a href="#estatistica-covid"><p>estatísticas covid</p></a></li>
-			<li><a href="#alguns-impactos"><p>impactos ambientais</p></a></li>
-			<li><a href="#SIN"><p>Energia elétrica na pandemia</p></a>
-
-				<ul> <!-- Menu dropdown -->
-					<li><a href="#SIN"><p>Contexto</p></a></li>
-					<li><a href="#chart"><p>estatísticas</p></a></li>
-					<li><a href="#energia-renovavel"><p>Soluções</p></a></li>
+	<body>
+		<div class="menu">
+			<div class="menu__logo relative"></div>
+			<div class="menu__list">
+				<ul class="menu__ul">
+					<a href="index.html" class="trans">
+						<li>
+							<p>home</p>
+						</li>
+					</a>
+					<a href="./solar.html" class="trans">
+						<li>
+							<p>Energia Solar</p>
+						</li>
+					</a>
+					<a href="./maremotriz.html" class="trans">
+						<li>
+							<p>Energia Maremotriz</p>
+						</li>
+					</a>
+					<a href="./eolica.html" class="trans">
+						<li>
+							<p>Energia Eólica</p>
+						</li>
+					</a>
+					<a href="./nuclear.html" class="trans">
+						<li>
+							<p>Energia Nuclear</p>
+						</li>
+					</a>
+					<a href="./leis.html" class="trans">
+						<li>
+							<p>Leis Governamentais</p>
+						</li>
+					</a>
 				</ul>
+			</div>
+		</div>
 
-			</li>
-
-		</ul>
-
+	<div class="barra relative">
+		<img src="img/barra_covid.png" alt="Imagem de fundo do site, zoom microscópico do vírus covid 19" class="barra__img relative">
 	</div>
 
+	<div class="container relative">
+			<!-- TITULO ESTATISTICA -->
+			<div class="container__titulo"><h1 style="text-transform: uppercase;">Estatísticas da pandemia </h1></div>
 
+			<div class="container__cards" id="container__cards-1">
+				<div class="cards__card card--BordaGreen">
+					<div class="card__texto">
+						<h3>casos recuperados</h3>
+						<p>13.336.476</p>
+						<h3>Em acompanhamento</h3>
+						<p>1.034.431</p>
+					</div>
 
-	<div class="container"> <!-- div abre conteudo -->
-
-		<div class="container-titulo" id="estatistica-covid">
-			<img src="./img/IconeCovid.svg" alt="Covid">
-			<h1>estatísticas do covid-19</h1>
-		</div>
-
-		<div class="container-quadro"> <!-- div abre container quadro -->
-
-			<div class="quadro" id="quadro1-1"><!-- quadro1-1 -->
-
-				<div class="quadro-texto">
-					<p class="quadro-linha1">Casos confirmados</p>
-					<p class="quadro-linha2">12.748.747</p>
+					<div class="card__seta">
+						<img src="img/seta_cima_positiva.png" alt="Seta indicanto aumento positivo">
+					</div>
 				</div>
 
-				<div class="quadro-seta">
-					<div class="seta" id="seta-1">↑</div>
+				<div class="cards__card card--BordaRed">
+					<div class="card__texto">
+						<h3>Casos Confirmados</h3>
+						<p>14.856.888</p>
+						<h3>Casos novos</h3>
+						<p>77.359</p>
+					</div>
+
+					<div class="card__seta">
+						<img src="img/seta_cima_negativa.png" alt="Seta indicando aumento negativo">
+					</div>
 				</div>
 
+				<div class="cards__card card--BordaRed">
+					<div class="card__texto">
+						<h3>Óbitos Confirmados</h3>
+						<p>411.588</p>
+						<h3>Casos novos</h3>
+						<p>2.966</p>
+					</div>
+
+					<div class="card__seta">
+						<img src="img/seta_cima_negativa.png" alt="Seta indicando aumento negativo">
+					</div>
+				</div>
 			</div>
 
-			<div class="quadro" id="quadro1-2"><!-- quadro1-2 -->
-
-				<div class="quadro-texto">
-					<p class="quadro-linha1">óbitos confirmados</p>
-					<p class="quadro-linha2">321.515</p>
+			<div class="container__cards" id="container__cards-2">
+				<div class="cards__card card--BordaAzul card--tabela">
+					<div class="card__linha">
+						<h3>Síntese de casos, óbitos, incidência e mortalidade</h3>
+					</div>
+					<div class="card__linha">
+						<div class="linha__1"></div>
+						<div class="linha__2"><p>Casos</p></div>
+						<div class="linha__3"><p>óbitos</p></div>
+						<div class="linha__4"><p>Incid./100mil hab</p></div>
+						<div class="linha__5"><p>Morta./100mil hab</p></div>
+						<div class="linha__6"><p>Atualização</p></div>
+					</div>
+					<div class="card__linha">
+						<div class="linha__1"><p>Brasil</p></div>
+						<div class="linha__2"><p>14.856.888</p></div>
+						<div class="linha__3"><p>411.588</p></div>
+						<div class="linha__4"><p>7069,8</p></div>
+						<div class="linha__5"><p>195,9</p></div>
+						<div class="linha__6"><p>04/05/2021 19:25</p></div>
+					</div>
+					<div class="card__linha">
+						<div class="linha__1"><p>     centro-oeste</p></div>
+						<div class="linha__2"><p>1.556.444</p></div>
+						<div class="linha__3"><p>38.836</p></div>
+						<div class="linha__4"><p>9550,5</p></div>
+						<div class="linha__5"><p>238,3</p></div>
+						<div class="linha__6"><p>04/05/2021 19:25</p></div>
+					</div>
+					<div class="card__linha">
+						<div class="linha__1"><p>     Sul</p></div>
+						<div class="linha__2"><p>2.843.698</p></div>
+						<div class="linha__3"><p>62.199</p></div>
+						<div class="linha__4"><p>9486,6</p></div>
+						<div class="linha__5"><p>207,5</p></div>
+						<div class="linha__6"><p>04/05/2021 19:25</p></div>
+					</div>
+					<div class="card__linha">
+						<div class="linha__1"><p>     Norte</p></div>
+						<div class="linha__2"><p>1.506.898</p></div>
+						<div class="linha__3"><p>38.369</p></div>
+						<div class="linha__4"><p>8175,9</p></div>
+						<div class="linha__5"><p>208,2</p></div>
+						<div class="linha__6"><p>04/05/2021 19:25</p></div>
+					</div>
+					<div class="card__linha">
+						<div class="linha__1"><p>     Nordeste</p></div>
+						<div class="linha__2"><p>3.434.127</p></div>
+						<div class="linha__3"><p>84.857</p></div>
+						<div class="linha__4"><p>6017,2</p></div>
+						<div class="linha__5"><p>148,7</p></div>
+						<div class="linha__6"><p>04/05/2021 19:25</p></div>
+					</div>
+					<div class="card__linha">
+						<div class="linha__1"><p>     Sudeste</p></div>
+						<div class="linha__2"><p>5.515.721</p></div>
+						<div class="linha__3"><p>187.327</p></div>
+						<div class="linha__4"><p>6241,5</p></div>
+						<div class="linha__5"><p>212,0</p></div>
+						<div class="linha__6"><p>04/05/2021 19:25</p></div>
+					</div>
 				</div>
-
-				<div class="quadro-seta">
-					<div class="seta" id="seta-2">↑</div>
-				</div>
-
 			</div>
+			<!-- TITULO CONTEUDO INDEX -->
+			<div class="container__titulo"><h1 style="text-transform: uppercase;margin-top: 4rem;">consumo de energia elétrica na pandemia</h1></div>
 
-			<div class="quadro quadro-positivo" id="quadro1-3"><!-- quadro1-3 -->
+			<div class="container__conteudo">
+					<div class="conteudo__texto relative">
+						<p>A pandemia do covid-19 causou uma redução no consumo de energia elétrica nos setores industriais e comerciais, como eles são responsáveis pela maior parte do consumo de energia elétrica. Mesmo com o aumento de consumo de energia elétrica residencial em decorrência do lockdown, este aumento não foi capaz de compensar o consumo elétrico reduzido nos outros setores.  </p>
+						<p>Quando a pandemia teve início em 2020 foram tomadas algumas medidas de prevenção a covid-19 e isso fez o consumo de energia elétrica recuar 14% em relação ao mês anterior do início da pandemia.</p>
+						<div class="tables">
+							<table id="tabela-de-consumo" class="relative">
+								<tr>
+									<th colspan="4">Impacto instantâneo no consumo elétrico</th>
+								</tr>
 
-				<div class="quadro-texto">
-					<p class="quadro-linha1">casos recuperados</p>
-					<p class="quadro-linha2">11.169.937</p>
+								<tr><th></th><th>18/03/2019(em mw)</th><th>18/03/2020(em mw)</th><th>Variação em %</th>
+								</tr>
+
+								<tr><td>frança</td><td>66.695</td><td>63.100</td><td>-20,4%</td>
+								</tr>
+
+								<tr><td>itália</td><td>42.550</td><td>37.330</td><td>-12.3%</td>
+								</tr>
+
+								<tr><td>espanha</td><td>31.804</td><td>30.566</td><td>-3.9%</td>
+								</tr>
+
+								<tr><td>portugal</td><td>6.656</td><td>6.297</td><td>-5,4%</td>
+								</tr>
+
+								<tr>
+									<td>EUA</td><td>200.531</td><td>181.597</td><td>-9,4%</td>
+								</tr>
+
+								<tr>
+									<td>brasil</td><td>64.506</td><td>55.252</td><td>-14,3%</td>
+								</tr>
+
+							</table>
+						</div>
+						<p>Toda essa redução no consumo de energia elétrica teve impactos positivos para o meio ambiente, pois o consumo é resultado do uso de recursos naturais, por isso deve-se fazer o uso de energia elétrica com mais consciência, para contribuir com o nosso planeta, ambientalmente e financeiramente.</p>
+						<p>Entretanto tudo isso é passageiro, o consumo de energia no país está voltando aos níveis pré-pandemia, se fazendo necessário propor soluções para manter o consumo de energia elétrica menor do que o consumo antes da pandemia, neste <em>blog</em> há alguns artigos publicados mostrando soluções propostas como objetivo institucional, <strong>podem ser acessado ao <i>menu</i> de links relacionados a direita</strong>.</p>
+					</div>
+
+					<!-- LINKS RELACIONADOS -->
+				<div class="conteudo__links">
+					<h3>Links relacionados:</h3>
+					<p><a href="./index.html" class="trans">⇲ HOME</a></p>
+					<p><a href="./solar.html" class="trans">⇲ Energia Solar</a></p>
+					<p><a href="./maremotriz.html" class="trans">⇲ Energia Maremotriz</a></p>
+					<p><a href="./eolica.html" class="trans">⇲ Energia Eólica</a></p>
+					<p><a href="./nuclear.html" class="trans">⇲ Energia Nuclear</a></p>
+					<p><a href="./leis.html" class="trans">⇲ Leis Governamentais</a></p>
 				</div>
-
-				<div class="quadro-seta">
-					<div class="seta" id="seta-3">↑</div>
-				</div>
-
-			</div>
-
-			<div class="quadro quadro-neutro" id="quadro2-1"><!-- quadro2-1 -->
-
-				<div class="quadro-texto">
-					<p class="quadro-linha1">Incidência</p>
-					<p class="quadro-linha3">por 100 mil habitantes</p>
-					<p class="quadro-linha2">6.109,9</p>
-				</div>
-
-				<div class="quadro-seta">
-					<div class="seta" id="seta-4">-</div>
-				</div>
-
-			</div>
-
-			<div class="quadro quadro-neutro" id="quadro2-2"><!-- quadro2-2 -->
-
-				<div class="quadro-texto">
-					<p class="quadro-linha1">Mortalidade</p>
-					<p class="quadro-linha3">por 100 mil habitantes</p>
-					<p class="quadro-linha2">154,8</p>
-				</div>
-
-				<div class="quadro-seta">
-					<div class="seta" id="seta-5">-</div>
-				</div>
-
-			</div>
-
-			<div class="quadro quadro-neutro" id="quadro2-3"><!-- quadro2-3 -->
-
-				<div class="quadro-texto">
-					<p class="quadro-linha1">Letalidade</p>
-					<p class="quadro-linha2">2,5%</p>
-				</div>
-
-				<div class="quadro-seta">
-					<div class="seta" id="seta-6">-</div>
-				</div>
-
-			</div>
-
-			<div class="quadro lixo" id="quadro3-1"><!-- quadro3-1 -->
-
-				<div class="quadro-texto">
-					<p class="quadro-linha1">Lixo residencial</p>
-					<p class="quadro-linha2">15% ~ 25%</p>
-				</div>
-
-				<div class="quadro-seta">
-					<div class="seta" id="seta-7">↑</div>
-				</div>
-
-			</div>
-
-			<div class="quadro lixo" id="quadro3-2"><!-- quadro3-2 -->
-
-				<div class="quadro-texto">
-					<p class="quadro-linha1">lixo hospitalar</p>
-					<p class="quadro-linha2">1000% ~ 2000%</p>
-				</div>
-
-				<div class="quadro-seta">
-					<div class="seta" id="seta-8">↑</div>
-				</div>
-
-			</div>
-
-		</div> <!-- div fecha container quadro -->
-
-
-		<div class="container-titulo" id="alguns-impactos">
-			<img src="./img/IconeCovid.svg" alt="Covid">
-			<h1>alguns impactos ambientais da pandemia</h1>
-		</div>
-
-
-		<div class="container-conteudo-txt impct-geral">
-
-			<div class="impct-positivo">
-
-				<p>Redução na emissão de gases do efeito estufa</p>
-				<p>Melhora na qualidade de sistemas aquíferos</p>
-				<p>Redução na poluição sonora e melhora na qualidade do ar</p>
-				<p>Restauração da vida selvagem e sistemas ecológicos em geral</p>
-
-			</div>
-
-			<div class="impct-negativo">
-
-				<p>Aumento na geração de lixo residencial</p>
-				<p>Aumento na geração de lixo hospitalar</p>
-				<p>Aumento do descarte descontrolado de EPI’s</p>
-				<p>Esforços de reciclagem diminuídos</p>
-
-			</div>
-
-		</div>
-
-		<div class="container-titulo" id="energia-pandemia">
-			<img src="./img/IconeCovid.svg" alt="Covid">
-			<h1>energia elétrica na pandemia</h1>
-		</div>
-
-
-		<div class="container-conteudo-txt texto-pandemia">
-			<div>
-				<p class="texto-sin">
-					O Sistema Interligado Nacional vem sofrendo, durante as últimas década, com os níveis de água dos reservatórios das
-					usinas hidrelétricas que o compõem, causando blecautes como o apagão energético de 2001, e a pandemia vem contribuindo
-					com o alívio desse sistema.
-				</p>
-				<img src="./img/SIN.png" alt="Sistema Interligado Nacional" id="SIN">
-			</div>
-
-			<div>
-				<img src="./img/energy-consumption.svg" alt="Gráfico de consumo de energia na pandemia" id="chart">
-				<p class="texto-sin">
-					Durante a pandemia, tivemos mudanças no balanço do impacto ambiental, alguns pontos melhoraram e outros pioraram, um dos
-					maiores impactos foi no consumo de energia elétrica onde teve uma recessão de 14% na média de consumo 4 semanas após o
-					início da pandemia, no mercado livre, houve uma redução de 18% no período de lockdown, tendo como os maiores
-					responsáveis por essa queda os setores da indústria automotiva e têxtil, mas essa queda é temporária e já há algumas
-					projeções para 2021 onde os níveis de consumo de energia elétrica voltam a crescer e reestabelecer aos níveis anteriores
-					a pandemia.
-				</p>
-			</div>
-
-			<div>
-				<p class="texto-sin">
-					Portanto é necessário manter essa redução e desenvolver o setor de energia renovável, como usinas nucleares, geradores
-					eólicos em regiões favoráveis, diretivas governamentais voltada para o incentivo do setor primário e secundário a gerar
-					uma parte de seu próprio consumo através de energia solar e eólica, e a transição de combustíveis fósseis para
-					biocombustível, tendo como objetivo ter um sistema de produção mais sustentável e saudável para o meio ambiente.
-				</p>
-				<img src="./img/energia-renovavel.png" alt="Gráfico de consumo de energia na pandemia" id="energia-renovavel">
 			</div>
 
 		</div>
 
-
-	</div> <!-- div fecha conteudo -->
-
-	<div class="footer">
-
-		<div class="footer-inner">
-
-			<ul>
-				<li><a href="https://docs.google.com/document/d/1xYDG-Pd0IAyAfHW5M-la03-YlPvQvZ8g-nhuoWYeOOs/edit?usp=sharing" target="_blank">Referencia bibliográfica</a></li>
-				<li><a href="#estatistica-covid">estatísticas do covid-19</a></li>
-				<li><a href="#alguns-impactos">alguns impactos ambientais da pandemia</a></li>
-				<li><a href="#energia-pandemia">energia elétrica na pandemia</a></li>
-			</ul>
-
+		<div class="footer relative">
+			<div class="footer__list">
+				<ul class="menu__ul">
+					<a href="./solar.html" class="trans relative">
+						<li>
+							<p>Energia Solar</p>
+						</li>
+					</a>
+					<a href="./maremotriz.html" class="trans relative">
+						<li>
+							<p>Energia Maremotriz</p>
+						</li>
+					</a>
+					<a href="./eolica.html" class="trans relative">
+						<li>
+							<p>Energia Eólica</p>
+						</li>
+					</a>
+					<a href="./nuclear.html" class="trans relative">
+						<li>
+							<p>Energia Nuclear</p>
+						</li>
+					</a>
+					<a href="./leis.html" class="trans relative">
+						<li>
+							<p>Leis Governamentais</p>
+						</li>
+					</a>
+				</ul>
+			</div>
 		</div>
 
-	</div>
-
-</body>
+	</body>
 </html>
